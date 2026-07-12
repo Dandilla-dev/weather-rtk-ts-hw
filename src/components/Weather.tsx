@@ -5,7 +5,6 @@ import {useGetWeatherByCityQuery} from "../features/api/weatherApi.ts";
 const Weather = () => {
     const city = useAppSelector(state => state.city);
     const {data, error, isLoading} = useGetWeatherByCityQuery(city, {
-        pollingInterval: 30000,
     });
 
     if (!city) {
